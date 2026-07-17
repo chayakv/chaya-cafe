@@ -1,0 +1,202 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Root Theme Colors */
+:root {
+  --primary-color: #5C3D2E;     /* Coffee Brown */
+  --secondary-color: #FFF8E7;   /* Cream */
+  --accent-color: #D4A373;      /* Gold */
+  --background-color: #FAF3E0;  /* Soft Beige */
+  --success-color: #6A994E;     /* Green */
+  --danger-color: #C97C5D;      /* Soft Red */
+  --text-color: #2D2D2D;        /* Dark Text */
+  --white: #ffffff;
+}
+
+/* Global */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-color);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Category Buttons */
+.category-btn {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 1px solid var(--accent-color);
+  padding: 10px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+/* Product Card */
+.product-card {
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.product-price {
+  color: var(--accent-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-cart {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-cart:hover {
+  opacity: 0.9;
+}
+
+.btn-success {
+  background-color: var(--success-color);
+  color: var(--white);
+}
+
+.btn-danger {
+  background-color: var(--danger-color);
+  color: var(--white);
+}
+
+/* Forms */
+.form-container {
+  background-color: var(--white);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--accent-color);
+}
+
+/* Checkout Section */
+.checkout-box {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.06);
+}
+
+.checkout-title {
+  color: var(--primary-color);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Success Message */
+.success-message {
+  background-color: var(--success-color);
+  color: var(--white);
+  padding: 15px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 24px;
+  }
+
+  .product-card img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .form-container {
+    margin: 20px;
+  }
+}
